@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-console.log('Welcome to the Brain Games!');
+import findUserName from '../src/cli.js';
+
+findUserName();
