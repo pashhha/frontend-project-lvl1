@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/pashhha/frontend-project-lvl1#readme",
   "dependencies": {
-    "eslint-config-airbnb": "^18.2.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
