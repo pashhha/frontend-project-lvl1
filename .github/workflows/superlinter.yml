@@ -18,7 +18,8 @@ jobs:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: npm install
         run: npm install
-        env: node: true
+        env: 
+           node: true
             
       - name: Checkout code
         uses: actions/checkout@v2
