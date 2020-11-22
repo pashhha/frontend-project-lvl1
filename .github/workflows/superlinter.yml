@@ -17,7 +17,7 @@ jobs:
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: npm install
-        run: make install
+        run: npm install
             
       - name: Checkout code
         uses: actions/checkout@v2
