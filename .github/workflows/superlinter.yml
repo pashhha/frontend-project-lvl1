@@ -1,7 +1,9 @@
 name: Super-Linter
 
 # Run this workflow every time a new commit pushed to your repository
-on: push
+on: 
+  - push
+  - pull_request
 
 jobs:
   # Set the job key. The key is displayed as the job name
@@ -14,8 +16,12 @@ jobs:
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: npm install
+        run: make install
+            
       - name: Checkout code
         uses: actions/checkout@v2
+        
       - name: Run Linter
         run: make lint
 
