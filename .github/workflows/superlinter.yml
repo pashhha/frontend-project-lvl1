@@ -1,4 +1,4 @@
-name: Super-Linter
+name: Lint
 
 # Run this workflow every time a new commit pushed to your repository
 on: 
@@ -8,28 +8,35 @@ on:
 jobs:
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
-  super-lint:
+  run-linters:
     # Name the Job
-    name: Lint code base
+    name: Run Linters
     # Set the type of machine to run on
     runs-on: ubuntu-latest
 
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
-      - name: npm install
-        run: npm install
-        env: 
-           node: true
-            
       - name: Checkout code
         uses: actions/checkout@v2
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+        
+      - name: install node.js dependencies
+        run: npm install
+       
+            
+      
         
       - name: Run Linter
         run: make lint
 
-      # Runs the Super-Linter action
-      - name: Run Super-Linter
-        uses: github/super-linter@v3
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run linters
+        uses: wearerequired/lint-action@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # Enable linters
+          eslint: true
+          
