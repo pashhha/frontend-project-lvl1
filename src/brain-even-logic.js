@@ -22,7 +22,7 @@ export default () => {
 
     if (getAnswer === isNumberEven(randomNumber)) {
       console.log('Correct!');
-      rightAnswerCount++;
+      rightAnswerCount += 1;
     } else {
       return console.log(`${getAnswer} is wrong answer ;(. Correct answer was ${isNumberEven(randomNumber)}.
                 Let's try again, ${name}!`);
