@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import findRightAnswer from '../src/brain-even-logic.js';
+import brainEvenGame from '../src/index.js';
+import { brainEven } from '../src/games/braineven-logic.js';
 
-findRightAnswer();
+brainEvenGame(brainEven);
