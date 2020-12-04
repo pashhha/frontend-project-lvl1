@@ -1,4 +1,4 @@
-import { getRandomNumber } from './braineven-logic.js';
+import { getRandomNumber } from "./braineven-logic.js";
 
 const makeArray = () => {
   const array = [];
@@ -16,18 +16,22 @@ const checkNumbers = (num1, num2) => {
 };
 
 const brainGcd = {
-  rules: 'Find the greatest common divisor of given numbers.',
+  rules: "Find the greatest common divisor of given numbers.",
   question() {
     let number1;
     let number2;
+    let correctAnswer = 1;
     const coll = makeArray();
 
-    while (number1 === number2) {
-      number1 = coll[getRandomNumber(0, coll.length)];
-      number2 = coll[getRandomNumber(0, coll.length)];
+    while (correctAnswer < 2) {
+      number1 = coll[getRandomNumber(0, coll.length - 1)];
+      number2 = coll[getRandomNumber(0, coll.length - 1)];
+      correctAnswer = checkNumbers(number1, number2);
+      if (number1 === number2) {
+        correctAnswer === 1;
+      }
     }
-
-    brainGcd.correctAnswer = String(checkNumbers(number1, number2));
+    brainGcd.correctAnswer = String(correctAnswer);
     return `${number1} ${number2}`;
   },
 };

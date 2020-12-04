@@ -12,7 +12,7 @@ const brainProgression = {
       progressionArray.push(arrayBegin);
       arrayBegin += arrayStep;
     }
-    const randomIndex = getRandomNumber(0, progressionArray.length);
+    const randomIndex = getRandomNumber(0, progressionArray.length - 1);
     brainProgression.correctAnswer = String(progressionArray[randomIndex]);
     progressionArray[randomIndex] = '..';
     return progressionArray.join(' ');

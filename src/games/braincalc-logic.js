@@ -7,7 +7,7 @@ const brainCalc = {
     let number1;
     let number2;
 
-    const operator = operators[getRandomNumber(0, operators.length)];
+    const operator = operators[getRandomNumber(0, operators.length - 1)];
     switch (operator) {
       case '*':
         number1 = getRandomNumber(2, 10);
