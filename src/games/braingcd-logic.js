@@ -1,14 +1,13 @@
-import { getRandomNumber } from "./braineven-logic.js";
+import { getRandomNumber, getArray, excludePrimeNumbers } from '../functions.js';
+import game from '../index.js';
 
-const makeArray = () => {
-  const array = [];
-  for (let i = 1; i <= 60; i += 1) {
-    if (i % 2 === 0 || i % 3 === 0 || i % 5 === 0 || i % 7 === 0) array.push(i);
-  }
-  return array;
-};
+const minArrayValue = 1;
+const maxArrayValue = 60;
 
-const checkNumbers = (num1, num2) => {
+const array = getArray(minArrayValue, maxArrayValue);
+const gcdArray = excludePrimeNumbers(array);
+
+const findGreatestCommonDivisor = (num1, num2) => {
   while (num1 !== 0 && num2 !== 0) {
     num1 > num2 ? (num1 %= num2) : (num2 %= num1);
   }
@@ -16,24 +15,23 @@ const checkNumbers = (num1, num2) => {
 };
 
 const brainGcd = {
-  rules: "Find the greatest common divisor of given numbers.",
+  rules: 'Find the greatest common divisor of given numbers.',
   question() {
-    let number1;
-    let number2;
-    let correctAnswer = 1;
-    const coll = makeArray();
+    let randomNumber1;
+    let randomNumber2;
+    let correctAnswer = 0;
 
     while (correctAnswer < 2) {
-      number1 = coll[getRandomNumber(0, coll.length - 1)];
-      number2 = coll[getRandomNumber(0, coll.length - 1)];
-      correctAnswer = checkNumbers(number1, number2);
-      if (number1 === number2) {
-        correctAnswer === 1;
+      randomNumber1 = gcdArray[getRandomNumber(0, gcdArray.length - 1)];
+      randomNumber2 = gcdArray[getRandomNumber(0, gcdArray.length - 1)];
+      correctAnswer = findGreatestCommonDivisor(randomNumber1, randomNumber2);
+      if (randomNumber1 === randomNumber2) {
+        correctAnswer === 0;
       }
     }
     brainGcd.correctAnswer = String(correctAnswer);
-    return `${number1} ${number2}`;
+    return `${randomNumber1} ${randomNumber2}`;
   },
 };
 
-export default brainGcd;
+export default () => game(brainGcd);

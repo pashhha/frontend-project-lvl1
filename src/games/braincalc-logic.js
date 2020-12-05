@@ -1,33 +1,34 @@
-import { getRandomNumber } from './braineven-logic.js';
+import { getRandomNumber } from '../functions.js';
+import game from '../index.js';
 
 const brainCalc = {
   rules: 'What is the result of the expression?',
   question() {
     const operators = ['+', '-', '*'];
-    let number1;
-    let number2;
+    let randomNumber1;
+    let randomNumber2;
 
-    const operator = operators[getRandomNumber(0, operators.length - 1)];
-    switch (operator) {
+    const randomOperator = operators[getRandomNumber(0, operators.length - 1)];
+    switch (randomOperator) {
       case '*':
-        number1 = getRandomNumber(2, 10);
-        number2 = getRandomNumber(2, 10);
-        brainCalc.correctAnswer = String(number1 * number2);
+        randomNumber1 = getRandomNumber(2, 10);
+        randomNumber2 = getRandomNumber(2, 10);
+        brainCalc.correctAnswer = String(randomNumber1 * randomNumber2);
         break;
       case '+':
-        number1 = getRandomNumber(10, 30);
-        number2 = getRandomNumber(1, 20);
-        brainCalc.correctAnswer = String(number1 + number2);
+        randomNumber1 = getRandomNumber(10, 30);
+        randomNumber2 = getRandomNumber(1, 20);
+        brainCalc.correctAnswer = String(randomNumber1 + randomNumber2);
         break;
       case '-':
-        number1 = getRandomNumber(30, 70);
-        number2 = getRandomNumber(1, 30);
-        brainCalc.correctAnswer = String(number1 - number2);
+        randomNumber1 = getRandomNumber(30, 70);
+        randomNumber2 = getRandomNumber(1, 30);
+        brainCalc.correctAnswer = String(randomNumber1 - randomNumber2);
         break;
       default: break;
     }
-    return `${number1} ${operator} ${number2}`;
+    return `${randomNumber1} ${randomOperator} ${randomNumber2}`;
   },
 };
 
-export default brainCalc;
+export default () => game(brainCalc);

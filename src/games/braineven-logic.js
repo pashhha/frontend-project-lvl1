@@ -1,6 +1,7 @@
-export const getRandomNumber = (min, max) => Math.round(Math.random() * (max - min) + min);
+import { getRandomNumber } from '../functions.js';
+import game from '../index.js';
 
-export const brainEven = {
+const brainEven = {
   rules: 'Answer "yes" if the number is even, otherwise answer "no".',
   question() {
     const brainEvenQuestion = getRandomNumber(1, 100);
@@ -8,3 +9,5 @@ export const brainEven = {
     return brainEvenQuestion;
   },
 };
+
+export default () => game(brainEven);

@@ -1,4 +1,5 @@
-import { getRandomNumber } from './braineven-logic.js';
+import { getRandomNumber } from '../functions.js';
+import game from '../index.js';
 
 const brainProgression = {
   rules: 'What number is missing in the progression?',
@@ -19,4 +20,4 @@ const brainProgression = {
   },
 };
 
-export default brainProgression;
+export default () => game(brainProgression);
