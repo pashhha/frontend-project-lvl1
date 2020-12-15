@@ -8,20 +8,20 @@
 
  ## brain-even: 
  
- [![asciicast](https://asciinema.org/a/H0h0YjFcdTsdjAJgDDtx6JQzM.png)](https://asciinema.org/a/H0h0YjFcdTsdjAJgDDtx6JQzM)
+ https://asciinema.org/a/H9mRgAZABC52YyFWs48TD7Y98
  
  ## brain-calc: 
  
- https://asciinema.org/a/LmTtXsJ7VI9wbguZaCt2VVXrc
+ https://asciinema.org/a/EG7AyQobC8XUvybcbBTHvH5A9
 
 ## brain-gcd:
  
- https://asciinema.org/a/xm9I9630ZwCmtvzc8Km0K9WQz
+ https://asciinema.org/a/lSseAspkvaPALNOhf16ZQ1Oyc
 
 ## brain-progression: 
 
-https://asciinema.org/a/MS43Yp1FEg4AKhOggpdncr58c
+https://asciinema.org/a/GTzevKCqHKhJmudzLUGBKKzsP
 
 ## brain-prime:
 
- https://asciinema.org/a/vofIcXrJEyrzy2gMwOPd9Maoe
+ https://asciinema.org/a/T6J4d38hi6GXP5YfG9R8OAVjv
