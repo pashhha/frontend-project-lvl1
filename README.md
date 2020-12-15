@@ -8,7 +8,7 @@
 
  ## brain-even: 
  
- https://asciinema.org/a/QYInDYdO8V8gXLCB8It60sX0U
+ [![asciicast](https://asciinema.org/a/H0h0YjFcdTsdjAJgDDtx6JQzM.png)](https://asciinema.org/a/H0h0YjFcdTsdjAJgDDtx6JQzM)
  
  ## brain-calc: 
  
