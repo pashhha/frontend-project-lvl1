@@ -1,18 +1,13 @@
-import { getRandomNumber, getArray, excludePrimeNumbers } from '../functions.js';
-import game from '../index.js';
+import {
+  getRandomNumber, getArray, excludePrimeNumbers, findGreatestCommonDivisor,
+} from '../helpers.js';
+import runGame from '../index.js';
 
 const minArrayValue = 1;
 const maxArrayValue = 60;
 
 const array = getArray(minArrayValue, maxArrayValue);
 const gcdArray = excludePrimeNumbers(array);
-
-const findGreatestCommonDivisor = (num1, num2) => {
-  while (num1 !== 0 && num2 !== 0) {
-    num1 > num2 ? (num1 %= num2) : (num2 %= num1);
-  }
-  return num1 + num2;
-};
 
 const brainGcd = {
   rules: 'Find the greatest common divisor of given numbers.',
@@ -34,4 +29,4 @@ const brainGcd = {
   },
 };
 
-export default () => game(brainGcd);
+export default () => runGame(brainGcd);

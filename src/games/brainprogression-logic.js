@@ -1,18 +1,10 @@
-import { getRandomNumber } from '../functions.js';
-import game from '../index.js';
+import { getRandomNumber, getProgressionArray } from '../helpers.js';
+import runGame from '../index.js';
 
 const brainProgression = {
   rules: 'What number is missing in the progression?',
   question() {
-    const arrayStep = getRandomNumber(2, 11);
-    const arrayStepsCount = getRandomNumber(5, 10);
-    let arrayBegin = getRandomNumber(1, 40);
-    const arrayEnd = arrayBegin + (arrayStepsCount * arrayStep);
-    const progressionArray = [];
-    while (arrayBegin <= arrayEnd) {
-      progressionArray.push(arrayBegin);
-      arrayBegin += arrayStep;
-    }
+    const progressionArray = getProgressionArray();
     const randomIndex = getRandomNumber(0, progressionArray.length - 1);
     brainProgression.correctAnswer = String(progressionArray[randomIndex]);
     progressionArray[randomIndex] = '..';
@@ -20,4 +12,4 @@ const brainProgression = {
   },
 };
 
-export default () => game(brainProgression);
+export default () => runGame(brainProgression);

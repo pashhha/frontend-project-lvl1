@@ -1,5 +1,5 @@
-import { getRandomNumber } from '../functions.js';
-import game from '../index.js';
+import { getRandomNumber } from '../helpers.js';
+import runGame from '../index.js';
 
 const brainEven = {
   rules: 'Answer "yes" if the number is even, otherwise answer "no".',
@@ -10,4 +10,4 @@ const brainEven = {
   },
 };
 
-export default () => game(brainEven);
+export default () => runGame(brainEven);

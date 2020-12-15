@@ -1,32 +1,7 @@
-import { getRandomNumber, isNumberPrime } from '../functions.js';
-import game from '../index.js';
-
-const getPrimeNumbers = (min, max) => {
-  const primes = [];
-  let i = min;
-  for (i; i <= max; i += 1) {
-    if (isNumberPrime(i)) {
-      primes.push(i);
-    }
-  }
-  return primes;
-};
-
-// чтобы было сложнее определить простое это число или нет - к простым числам решил добавить
-// массив из чисел которые делятся на 3 и на 7, но при этом не делятся на 2. прим. 21, 27, 33, 49
-
-const getNotPrimeNumbers = (min, max) => {
-  const notPrimes = [];
-  let i = min;
-  for (i; i <= max; i += 1) {
-    if (i % 3 === 0 && i % 2 !== 0) {
-      notPrimes.push(i);
-    } else if (i % 7 === 0 && i % 2 !== 0) {
-      notPrimes.push(i);
-    }
-  }
-  return notPrimes;
-};
+import {
+  getRandomNumber, isNumberPrime, getPrimeNumbers, getNotPrimeNumbers,
+} from '../helpers.js';
+import runGame from '../index.js';
 
 const primeNumbers = getPrimeNumbers(2, 100);
 const notPrimeNumbers = getNotPrimeNumbers(2, 100);
@@ -41,4 +16,4 @@ const brainPrime = {
   },
 };
 
-export default () => game(brainPrime);
+export default () => runGame(brainPrime);
