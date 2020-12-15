@@ -21,7 +21,7 @@ const brainGcd = {
       randomNumber2 = gcdArray[getRandomNumber(0, gcdArray.length - 1)];
       correctAnswer = findGreatestCommonDivisor(randomNumber1, randomNumber2);
       if (randomNumber1 === randomNumber2) {
-        correctAnswer === 0;
+        correctAnswer = 0;
       }
     }
     brainGcd.correctAnswer = String(correctAnswer);
