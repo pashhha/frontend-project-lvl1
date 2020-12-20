@@ -1,32 +1,27 @@
-import {
-  getRandomNumber, getArray, excludePrimeNumbers, findGreatestCommonDivisor,
-} from '../helpers.js';
+import { getRandomNumber, excludePrimeNumbers } from '../helpers.js';
 import runGame from '../index.js';
 
-const minArrayValue = 1;
-const maxArrayValue = 60;
-
-const array = getArray(minArrayValue, maxArrayValue);
-const gcdArray = excludePrimeNumbers(array);
-
-const brainGcd = {
-  rules: 'Find the greatest common divisor of given numbers.',
-  question() {
-    let randomNumber1;
-    let randomNumber2;
-    let correctAnswer = 0;
-
-    while (correctAnswer < 2) {
-      randomNumber1 = gcdArray[getRandomNumber(0, gcdArray.length - 1)];
-      randomNumber2 = gcdArray[getRandomNumber(0, gcdArray.length - 1)];
-      correctAnswer = findGreatestCommonDivisor(randomNumber1, randomNumber2);
-      if (randomNumber1 === randomNumber2) {
-        correctAnswer = 0;
-      }
-    }
-    brainGcd.correctAnswer = String(correctAnswer);
-    return `${randomNumber1} ${randomNumber2}`;
-  },
+const findGreatestCommonDivisor = (number1, number2) => {
+  let num1 = number1;
+  let num2 = number2;
+  while (num1 !== 0 && num2 !== 0) {
+    num1 > num2 ? (num1 %= num2) : (num2 %= num1);
+  }
+  return num1 + num2;
 };
 
-export default () => runGame(brainGcd);
+const gcdArray = excludePrimeNumbers(1, 100);
+
+const rules = 'Find the greatest common divisor of given numbers.';
+
+const makeGame = () => {
+  const randomNumber1 = gcdArray[getRandomNumber(0, gcdArray.length - 1)];
+  const randomNumber2 = gcdArray[getRandomNumber(0, gcdArray.length - 1)];
+
+  const question = `${randomNumber1} ${randomNumber2}`;
+  const answer = String(findGreatestCommonDivisor(randomNumber1, randomNumber2));
+  const questionAnswerArray = [question, answer];
+  return questionAnswerArray;
+};
+
+export default () => runGame(rules, makeGame);
