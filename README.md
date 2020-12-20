@@ -1,14 +1,14 @@
 ### Hexlet tests and linter status:
 ![Actions Status](/workflows/hexlet-check/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Lint](https://github.com/pashhha/frontend-project-lvl1/workflows/Lint/badge.svg)] (https://github.com/pashhha/frontend-project-lvl1/actions?query=workflow%3ALint)
+[[![Lint](https://github.com/pashhha/frontend-project-lvl1/workflows/Lint/badge.svg)] (https://github.com/pashhha/frontend-project-lvl1/actions?query=workflow%3ALint)]
 
 ## asciinema links
 
 
  ## brain-even: 
  
- [![asciinema](https://asciinema.org/a/H9mRgAZABC52YyFWs48TD7Y98.png)] (https://asciinema.org/a/H9mRgAZABC52YyFWs48TD7Y98)
+ [[![asciinema](https://asciinema.org/a/H9mRgAZABC52YyFWs48TD7Y98.png)] (https://asciinema.org/a/H9mRgAZABC52YyFWs48TD7Y98)]
  
  ## brain-calc: 
  
