@@ -14,19 +14,18 @@ const getProgressionArray = (arrayBegin, step, stepCount) => {
 const rules = 'What number is missing in the progression?';
 
 const makeGame = () => {
+  const arrayBegin = getRandomNumber(1, 40);
+  const arrayStep = getRandomNumber(2, 11);
+  const stepsCount = getRandomNumber(5, 10);
+  const progressionArray = getProgressionArray(arrayBegin, arrayStep, stepsCount);
+  const randomIndex = getRandomNumber(0, progressionArray.length - 1);
+  const answer = String(progressionArray[randomIndex]);
+  progressionArray[randomIndex] = '..';
+  const question = progressionArray.join(' ');
 
-const arrayBegin = getRandomNumber(1, 40);
-const arrayStep = getRandomNumber(2, 11);
-const stepsCount = getRandomNumber(5, 10);
-const progressionArray = getProgressionArray(arrayBegin, arrayStep, stepsCount);
-const randomIndex = getRandomNumber(0, progressionArray.length - 1);
-progressionArray[randomIndex] = '..';
-const question = progressionArray.join(' ');
-const answer = String(progressionArray[randomIndex]);
+  const questionAnswerArray = [question, answer];
 
-const questionAnswerArray = [question, answer];
-
-return questionAnswerArray;
-},
+  return questionAnswerArray;
+};
 
 export default () => runGame(rules, makeGame);
