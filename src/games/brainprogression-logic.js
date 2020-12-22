@@ -4,9 +4,10 @@ import runGame from '../index.js';
 const getProgressionArray = (arrayBegin, step, stepCount) => {
   const arrayEnd = arrayBegin + (step * stepCount);
   const array = [];
-  while (arrayBegin <= arrayEnd) {
-    array.push(arrayBegin);
-    arrayBegin += step;
+  let i = arrayBegin;
+  while (i <= arrayEnd) {
+    array.push(i);
+    i += step;
   }
   return array;
 };
