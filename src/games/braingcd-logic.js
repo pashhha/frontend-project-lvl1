@@ -1,8 +1,7 @@
 import { getRandomNumber, excludePrimeNumbers } from '../helpers.js';
 import runGame from '../index.js';
 
-const findGcd = (number1, number2) => number2 === 0 ? Math.abs(number1) : findGcd(number2, number1 % number2);
-  
+const findGcd = (num1, num2) => (num2 === 0 ? Math.abs(num1) : findGcd(num2, num1 % num2));
 
 const gcdArray = excludePrimeNumbers(1, 100);
 
