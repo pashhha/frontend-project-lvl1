@@ -5,15 +5,14 @@ const findGcd = (num1, num2) => (num2 === 0 ? Math.abs(num1) : findGcd(num2, num
 
 const gcdArray = excludePrimeNumbers(1, 100);
 
-const rules = 'Find the greatest common divisor of given numbers.';
+const rule = 'Find the greatest common divisor of given numbers.';
 
 const makeGame = () => {
   const randomNumber1 = gcdArray[getRandomNumber(0, gcdArray.length - 1)];
   const randomNumber2 = gcdArray[getRandomNumber(0, gcdArray.length - 1)];
   const question = `${randomNumber1} ${randomNumber2}`;
   const answer = String(findGcd(randomNumber1, randomNumber2));
-  const questionAnswerArray = [question, answer];
-  return questionAnswerArray;
+  return [question, answer];
 };
 
-export default () => runGame(rules, makeGame);
+export default () => runGame(rule, makeGame);

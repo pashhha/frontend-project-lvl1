@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import runBrainProgression from '../src/games/brainprogression-logic.js';
+import runBrainProgression from '../src/games/progression.js';
 
 runBrainProgression();

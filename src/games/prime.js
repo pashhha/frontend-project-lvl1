@@ -3,7 +3,7 @@ import {
 } from '../helpers.js';
 import runGame from '../index.js';
 
-const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const makeGame = () => {
   const primeNumbers = getPrimeNumbers(2, 100);
@@ -11,8 +11,7 @@ const makeGame = () => {
   const brainPrimeArray = primeNumbers.concat(notPrimeNumbers);
   const question = brainPrimeArray[getRandomNumber(0, brainPrimeArray.length - 1)];
   const answer = isNumberPrime(question) ? 'yes' : 'no';
-  const questionAnswerArray = [question, answer];
-  return questionAnswerArray;
+  return [question, answer];
 };
 
-export default () => runGame(rules, makeGame);
+export default () => runGame(rule, makeGame);
