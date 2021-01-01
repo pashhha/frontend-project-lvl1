@@ -8,11 +8,11 @@
 
  ## brain-even: 
  
- [![asciinema](https://asciinema.org/a/H9mRgAZABC52YyFWs48TD7Y98.png)](https://asciinema.org/a/H9mRgAZABC52YyFWs48TD7Y98)
+ ![Braineven](https://user-images.githubusercontent.com/73484589/103445234-4a3a7c00-4c7a-11eb-9d68-1ceb078b707f.gif)
  
  ## brain-calc: 
  
- [![asciinema](https://asciinema.org/a/EG7AyQobC8XUvybcbBTHvH5A9.png)](https://asciinema.org/a/EG7AyQobC8XUvybcbBTHvH5A9)
+ ![braincalc](https://user-images.githubusercontent.com/73484589/103445608-380f0c80-4c7f-11eb-9712-e2fbf8b2d31f.gif)
 
 ## brain-gcd:
  
