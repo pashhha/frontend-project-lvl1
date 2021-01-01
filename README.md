@@ -12,7 +12,7 @@
  
  ## brain-calc: 
  
- [![asciinema](https://asciinema.org/a/EG7AyQobC8XUvybcbBTHvH5A9.png)](https://asciinema.org/a/EG7AyQobC8XUvybcbBTHvH5A9)
+ ![braincalc](https://user-images.githubusercontent.com/73484589/103445608-380f0c80-4c7f-11eb-9712-e2fbf8b2d31f.gif)
 
 ## brain-gcd:
  
