@@ -8,7 +8,7 @@
 
  ## brain-even: 
  
- ![BrainEven](https://user-images.githubusercontent.com/73484589/103444917-6e945980-4c76-11eb-8610-cc9d31821331.mp4)
+ ![Braineven](https://user-images.githubusercontent.com/73484589/103445234-4a3a7c00-4c7a-11eb-9d68-1ceb078b707f.gif)
  
  ## brain-calc: 
  
