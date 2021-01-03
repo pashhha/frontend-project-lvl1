@@ -3,25 +3,29 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/pashhha/frontend-project-lvl1)
 [![Lint](https://github.com/pashhha/frontend-project-lvl1/workflows/Lint/badge.svg)](https://github.com/pashhha/frontend-project-lvl1/actions?query=workflow%3ALint)
 
+## How to start the game?
+
+[![asciinema](https://asciinema.org/a/Cx8VOgtsYbLhIIvFwrdTlWuMi.svg)](https://asciinema.org/a/Cx8VOgtsYbLhIIvFwrdTlWuMi)
+
 ## asciinema links
 
 
  ## brain-even: 
  
- ![Braineven](https://user-images.githubusercontent.com/73484589/103445234-4a3a7c00-4c7a-11eb-9d68-1ceb078b707f.gif)
+ [![asciinema](https://asciinema.org/a/Dp7YsgtAUJdAuDVuvMPzF4V8k.svg)](https://asciinema.org/a/Dp7YsgtAUJdAuDVuvMPzF4V8k)
  
  ## brain-calc: 
  
- ![braincalc](https://user-images.githubusercontent.com/73484589/103445608-380f0c80-4c7f-11eb-9712-e2fbf8b2d31f.gif)
+ [![asciinema](https://asciinema.org/a/qNtZDpHEBXkWALf6raAoylwqA.svg)](https://asciinema.org/a/qNtZDpHEBXkWALf6raAoylwqA)
 
 ## brain-gcd:
  
-[![asciinema](https://asciinema.org/a/lSseAspkvaPALNOhf16ZQ1Oyc.png)](https://asciinema.org/a/lSseAspkvaPALNOhf16ZQ1Oyc) 
+[![asciinema](https://asciinema.org/a/2T3GnyYobNRT4KBLEHtr58Ks5.svg)](https://asciinema.org/a/2T3GnyYobNRT4KBLEHtr58Ks5) 
 
 ## brain-progression: 
 
-[![asciinema](https://asciinema.org/a/GTzevKCqHKhJmudzLUGBKKzsP.png)](https://asciinema.org/a/GTzevKCqHKhJmudzLUGBKKzsP)
+[![asciinema](https://asciinema.org/a/VB9xhNDOcTuPrCq2wZisifMen.svg)](https://asciinema.org/a/VB9xhNDOcTuPrCq2wZisifMen)
 
 ## brain-prime:
 
- [![asciinema](https://asciinema.org/a/T6J4d38hi6GXP5YfG9R8OAVjv.png)](https://asciinema.org/a/T6J4d38hi6GXP5YfG9R8OAVjv)
+ [![asciinema](https://asciinema.org/a/Om1OZZtiCq5wc4YHBuJcgapu5.svg)](https://asciinema.org/a/Om1OZZtiCq5wc4YHBuJcgapu5)

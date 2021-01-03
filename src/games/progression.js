@@ -1,7 +1,7 @@
 import { getRandomNumber } from '../helpers.js';
 import runGame from '../index.js';
 
-const getProgressionColl = (collStep, collBegin, stepsCount) => {
+const getProgressionColl = (collBegin, collStep , stepsCount) => {
   const coll = [];
   for (let i = collBegin; coll.length < stepsCount; i += collStep) {
     coll.push(i);
