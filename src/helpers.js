@@ -20,7 +20,7 @@ export const getPrimeNumbers = (begin, end) => {
   return primes;
 };
 
-export const excludePrimeNumbers = (begin, end) => {
+export const getCompositNumbers = (begin, end) => {
   const coll = [];
   for (let i = begin; i <= end; i += 1) {
     if (isNumberPrime(i) === false) {
