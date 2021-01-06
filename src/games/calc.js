@@ -14,14 +14,14 @@ const getAnswer = (number1, number2, operator) => {
       result = number1 - number2;
       break;
     default:
-      return null;
+      result = null;
   }
   return result;
 };
 
 const rule = 'What is the result of the expression?';
 
-const makeGame = () => {
+const createGame = () => {
   const randomNumber1 = getRandomNumber(1, 30);
   const randomNumber2 = getRandomNumber(1, 30);
   const operators = ['+', '-', '*'];
@@ -32,4 +32,4 @@ const makeGame = () => {
   return [question, answer];
 };
 
-export default () => runGame(rule, makeGame);
+export default () => runGame(rule, createGame);

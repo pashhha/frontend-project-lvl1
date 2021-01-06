@@ -1,27 +1,27 @@
 import { getRandomNumber } from '../helpers.js';
 import runGame from '../index.js';
 
-const getProgressionColl = (collBegin, collStep, stepsCount) => {
-  const coll = [];
-  for (let i = collBegin; coll.length < stepsCount; i += collStep) {
-    coll.push(i);
+const getProgression = (start, step, stepsCount) => {
+  const result = [];
+  for (let i = start; result.length < stepsCount; i += step) {
+    result.push(i);
   }
-  return coll;
+  return result;
 };
 
 const rule = 'What number is missing in the progression?';
 
-const makeGame = () => {
-  const begin = getRandomNumber(1, 40);
+const createGame = () => {
+  const start = getRandomNumber(1, 40);
   const step = getRandomNumber(2, 11);
   const stepsCount = getRandomNumber(5, 10);
-  const progressionColl = getProgressionColl(begin, step, stepsCount);
-  const randomIndex = getRandomNumber(0, progressionColl.length - 1);
-  const answer = String(progressionColl[randomIndex]);
-  progressionColl[randomIndex] = '..';
-  const question = progressionColl.join(' ');
+  const progression = getProgression(start, step, stepsCount);
+  const randomIndex = getRandomNumber(0, progression.length - 1);
+  const answer = String(progression[randomIndex]);
+  progression[randomIndex] = '..';
+  const question = progression.join(' ');
 
   return [question, answer];
 };
 
-export default () => runGame(rule, makeGame);
+export default () => runGame(rule, createGame);

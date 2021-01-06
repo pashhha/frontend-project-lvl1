@@ -9,10 +9,9 @@ export const isNumberPrime = (num) => {
   return true;
 };
 
-export const getPrimeNumbers = (begin, end) => {
+export const getPrimeNumbers = (start, end) => {
   const primes = [];
-  let i = begin;
-  for (i; i <= end; i += 1) {
+  for (let i = start; i <= end; i += 1) {
     if (isNumberPrime(i)) {
       primes.push(i);
     }
@@ -20,12 +19,12 @@ export const getPrimeNumbers = (begin, end) => {
   return primes;
 };
 
-export const getCompositNumbers = (begin, end) => {
-  const coll = [];
-  for (let i = begin; i <= end; i += 1) {
+export const getCompositeNumbers = (start, end) => {
+  const composite = [];
+  for (let i = start; i <= end; i += 1) {
     if (isNumberPrime(i) === false) {
-      coll.push(i);
+      composite.push(i);
     }
   }
-  return coll;
+  return composite;
 };
